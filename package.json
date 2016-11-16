@@ -1,0 +1,19 @@
+{
+  "name": "vidservice",
+  "version": "0.1",
+  "description": "BB video microservice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CJ",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^15.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2",
+    "should": "^11.1.1",
+    "supertest": "^2.0.1"
+  }
+}
