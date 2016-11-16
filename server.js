@@ -26,7 +26,7 @@ server.register(plugin, (err) => {
 });
 
 
-// Add the route
+// Add the route.. test 
 server.route({
     method: 'GET',
     path:'/videoservice', 
