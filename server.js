@@ -89,14 +89,20 @@ server.route({
     method: 'DELETE',
     path:'/videoservice', 
     handler: function (request, reply) {
+	// extract vidid
+	var vidid = null;
+	if ( undefined != request.payload && undefined != request.payload.vidid) {
+	    vidid = request.payload.vidid;
+	} else if (undefined != request.query && undefined != request.query.vidid) {
+	    vidid = request.query.vidid;
+	}
 
-	// validation
-	if (request.payload.vidid == undefined) {
+	if (vidid == null) {
 	    throw new Error('Missing vidid for update request');
 	} else {
 	
 	    request.pg.client.query('DELETE FROM vid WHERE vidid = $1',
-					[request.payload.vidid], function (err, result) {
+					[vidid], function (err, result) {
 					    if (err) throw err;
 
 					    reply (result);
