@@ -1,6 +1,6 @@
 {
   "name": "vidservice",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "BB video microservice",
   "main": "server.js",
   "scripts": {
